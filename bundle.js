@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 9);
+/******/ 	return __webpack_require__(__webpack_require__.s = 11);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -73,7 +73,7 @@
 "use strict";
 
 
-console.log("hahahajackmyswag");
+__webpack_require__(9)(__webpack_require__(8));
 
 /***/ }),
 /* 1 */
@@ -90,7 +90,12 @@ exports.push([module.i, ".blue {\n  color: blue;\n}\n.yellow {\n  color: yellow;
 
 
 /***/ }),
-/* 2 */,
+/* 2 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"blue\">bluebooty on top of\n  <div class=\"pink\">pinkbooty on top of\n    <div class=\"red\">redbooty\n    </div>\n  </div>\n</div>\n<div>SHOOOOOOOOOOOooooooooooooOOOT</div>\n";
+
+/***/ }),
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2006,7 +2011,7 @@ function isnan (val) {
   return val !== val // eslint-disable-line no-self-compare
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10)))
 
 /***/ }),
 /* 5 */
@@ -2195,6 +2200,28 @@ module.exports = Array.isArray || function (arr) {
 /* 8 */
 /***/ (function(module, exports) {
 
+module.exports = "debugger\n\nconsole.log($(\".yellow\"));\n"
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports) {
+
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+module.exports = function(src) {
+	if (typeof execScript !== "undefined")
+		execScript(src);
+	else
+		eval.call(null, src);
+}
+
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports) {
+
 var g;
 
 // This works in non-strict mode
@@ -2219,30 +2246,22 @@ module.exports = g;
 
 
 /***/ }),
-/* 9 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
+var style = __webpack_require__(1);
+var code = __webpack_require__(2);
 __webpack_require__(0);
-var style = __webpack_require__(1).toString();
-var code = __webpack_require__(10);
 
 document.addEventListener('DOMContentLoaded', function () {
-  debugger;
   var c = document.createElement("div");
   c.innerHTML = code;
-  console.log(code);
   console.log(style);
   document.getElementById("root").append(c);
 });
-
-/***/ }),
-/* 10 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"blue\">bluebooty on top of\n  <div class=\"pink\">pinkbooty on top of\n    <div class=\"red\">redbooty\n    </div>\n  </div>\n</div>\n<div>SHOOOOOOOOOOOooooooooooooOOOT</div>\n";
 
 /***/ })
 /******/ ]);

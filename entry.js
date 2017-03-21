@@ -1,12 +1,10 @@
-require("./blowup.js");
-var style = require("./style.css").toString();
+var style = require("./style.css");
 var code = require("./template.html");
+require("./vendor/blowup.exec.js");
 
 document.addEventListener('DOMContentLoaded', () => {
-  debugger
   let c = document.createElement("div")
   c.innerHTML = code;
-  console.log(code);
   console.log(style);
   document.getElementById("root").append(c);
 })

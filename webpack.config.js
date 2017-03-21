@@ -22,6 +22,7 @@ module.exports = {
         test: [/\.css$/],
         loader: 'css-loader'
       }
+
     ]
   },
   devtool: 'source-map',
